@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
       "authorization_url": `${process.env.SELF_URL}api/token`,
       "authorization_content_type": "application/json",
       "verification_tokens": {
-          "openai": "24a23b0844e440de97988cdfb5019259"
+          "openai": `${process.env.OPEN_AI_VERIFY}`
       }
     },
     "logo_url": `${process.env.SELF_URL}logo.png`,
