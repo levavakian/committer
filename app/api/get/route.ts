@@ -10,7 +10,6 @@ export async function POST(req: NextRequest) {
   const filepath = data.filepath
 
   const response = await getFile(repo, filepath, auth);
-  console.log(response)
   if (response.status != 200) {
     return response
   }
