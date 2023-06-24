@@ -9,6 +9,7 @@ function standardHeaders(auth: string | null) : Record<string, string> {
 
 export async function getFile(repo: string, file: string, auth: string | null) {
   const headers = standardHeaders(auth);
+  console.log("pre", repo, file, `https://api.github.com/repos/${repo}/contents/${file}`)
   return fetch(
     `https://api.github.com/repos/${repo}/contents/${file}`,
     { headers, next: { revalidate: 60 } }
