@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
     "schema_version": "v1",
     "name_for_model": "CommitterGPT",
     "name_for_human": "CommitterGPT",
-    "description_for_human": "Read, create, modify and delete files from github repos.",
+    "description_for_human": "Read, create, modify and delete files from Github repos.",
     "description_for_model": "Use the CommitterGPT plugin to interact with Github repos. You can use it to read files, read the directory tree of the repo, create new files, overwrite existing files, append to existing files, and delete files. All operations are done with commits so they are non-destructive.",
     "api": {
       "type": "openapi",
