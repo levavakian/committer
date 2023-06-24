@@ -26,7 +26,7 @@ export async function GET(req: NextRequest) {
     },
     "logo_url": `${process.env.SELF_URL}logo.png`,
     "contact_email": "levavakian@gmail.com",
-    "legal_info_url": `${process.env.SELF_URL}legal`
+    "legal_info_url": `${process.env.SELF_URL}legal.txt`
   }
   return NextResponse.json(data);
 }
