@@ -8,6 +8,6 @@ export default async function Page({
   searchParams?: { [key: string]: string | string[] | undefined };
 })
 {
-  const redirect_uri = `${searchParams?.state}?code=${searchParams?.code}`
+  const redirect_uri = `${searchParams?.state}&code=${searchParams?.code}`
   redirect(redirect_uri);
 }
