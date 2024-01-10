@@ -16,7 +16,7 @@ export default async function Page({
   const githubAuthQuery = qs.stringify({
     client_id: process.env.GITHUB_CLIENT_ID, // Your Github App's Client ID
     scope: 'repo', // Replace this with the scopes you need
-    state: searchParams?.redirect_uri, // Using client_id as the state to match requests and responses
+    state: `${searchParams?.redirect_uri}?state=${searchParams?.state}`, // Using client_id as the state to match requests and responses
     // redirect_uri: searchParams?.redirect_uri
     redirect_uri: `${process.env.SELF_URL}redirect`
   });
