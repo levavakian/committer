@@ -4,8 +4,6 @@ import { getBearerToken } from  "@/app/lib/utils"
 export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
-  console.warn(req)
-  console.warn(await req.text())
   const data = await req.json()
 
   const response = await getBearerToken(data.code)
