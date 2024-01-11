@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
   const code = body.code;
 
   console.warn(code)
-  const response = await getBearerToken(dcode)
+  const response = await getBearerToken(code)
   console.warn(response)
   const token_data = await response.json()
   console.warn(token_data)
