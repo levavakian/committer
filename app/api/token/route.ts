@@ -4,10 +4,9 @@ import { getBearerToken } from  "@/app/lib/utils"
 export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
-  const text = await req.text();
-  console.warn(text)
-  const body = JSON.parse(text);
-  const code = body.code;
+  const text = await req.text()
+  const params = new URLSearchParams(text)
+  const code = params.get('code')!
   
   const response = await getBearerToken(code)
   const token_data = await response.json()
